@@ -4,7 +4,10 @@ import { Text, View, SafeAreaView, ScrollView, Switch, Image, StyleSheet, Toucha
 export default class Notification extends Component {
 
     state = {
-        switchValue: false
+        switchEmailValue: false,
+        switchMapValue:false,
+        switchPurchaseValue:false,
+        switchReview:false
     }
     render() {
         return (
@@ -23,15 +26,17 @@ export default class Notification extends Component {
                     <Text style={{ fontSize: 16, fontWeight: '700', letterSpacing: 1 }}>Email Notifications</Text>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row', width: '100%', height: 60, borderColor: 'transparent', borderWidth: 0.5 }}>
                         <View>
-                            <Text style={{ fontSize: 12, color: '#999', padding: 5, letterSpacing: 0.7 }}>Occasionally ,we'd like to email you about {"\n"}new maps that
+                            <Text style={{ fontSize: 11, color: '#999', padding: 5, letterSpacing: 0.7 }}>Occasionally ,we'd like to email you about {"\n"}new maps that
                              you may be interested in or {"\n"} new features on the app.</Text>
                         </View>
 
 
-                        <Switch style={styles.switchButton}
-                            value={this.state.switchValue}
-                            onValueChange={(switchValue) => this.setState({ switchValue })}>
-                            <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text>
+                        <Switch  
+                         trackColor={{true: '#1BCA9B', false: '#7B8788'}}
+                        // style={styles.switchButton}
+                            value={this.state.switchEmailValue}
+                            onValueChange={(switchEmailValue) => this.setState({ switchEmailValue })}>
+                            {/* <Text style ={{fontSize:10,padding:4}}>{this.state.switchValue ? 'Yes' : 'No'}</Text> */}
                         </Switch>
 
 
@@ -47,15 +52,16 @@ export default class Notification extends Component {
                     <Text style={{ fontSize: 14, fontWeight: '500', letterSpacing: 1 }}>Map Updates</Text>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row', width: '100%', height: 60, borderColor: 'transparent', borderWidth: 0.5 }}>
                         <View>
-                            <Text style={{ fontSize: 12, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a map you've saved or purchased {"\n"}
+                            <Text style={{ fontSize: 11, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a map you've saved or purchased {"\n"}
                                 has been updated by the creator.</Text>
                         </View>
 
 
-                        <Switch style={styles.switchButton}
-                            value={this.state.switchValue}
-                            onValueChange={(switchValue) => this.setState({ switchValue })}>
-                            <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text>
+                        <Switch  trackColor={{true: '#1BCA9B', false: '#7B8788'}}
+                               
+                               value={this.state.switchMapValue}
+                               onValueChange={(switchMapValue) => this.setState({ switchMapValue })}>
+                            {/* <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text> */}
                         </Switch>
 
 
@@ -66,15 +72,16 @@ export default class Notification extends Component {
                     <Text style={{ fontSize: 14, fontWeight: '500', letterSpacing: 1 }}>Permanent Closures</Text>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row', justifyContent: 'space-between', width: '100%', height: 60, borderColor: 'transparent', borderWidth: 0.5 }}>
                         <View>
-                            <Text style={{ fontSize: 12, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a location in a map you've created {"\n"}becomes permanently closed so that you
+                            <Text style={{ fontSize: 11, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a location in a map you've created {"\n"}becomes permanently closed so that you
                      {"\n"} can remove it from your map.</Text>
                         </View>
 
 
-                        <Switch style={styles.switchButton}
-                            value={this.state.switchValue}
-                            onValueChange={(switchValue) => this.setState({ switchValue })}>
-                            <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text>
+                        <Switch  trackColor={{true: '#1BCA9B', false: '#7B8788'}}
+                        
+                            value={this.state.switchPurchaseValue}
+                            onValueChange={(switchPurchaseValue) => this.setState({ switchPurchaseValue })}>
+                            {/* <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text> */}
                         </Switch>
 
 
@@ -85,14 +92,15 @@ export default class Notification extends Component {
                     <Text style={{ fontSize: 14, fontWeight: '500', letterSpacing: 1 }}>Purchases / Saves</Text>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row', width: '100%', height: 60, borderColor: 'transparent', borderWidth: 0.5 }}>
                         <View>
-                            <Text style={{ fontSize: 12, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a map you've created  has been{"\n"}purchased or saved by another user</Text>
+                            <Text style={{ fontSize: 11, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a map you've created  has been{"\n"}purchased or saved by another user</Text>
                         </View>
 
 
-                        <Switch style={styles.switchButton}
-                            value={this.state.switchValue}
-                            onValueChange={(switchValue) => this.setState({ switchValue })}>
-                            <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text>
+                        <Switch  trackColor={{true: '#1BCA9B', false: '#7B8788'}}
+                       
+                            value={this.state.switchReview}
+                            onValueChange={(switchReview) => this.setState({ switchReview })}>
+                            {/* <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text> */}
                         </Switch>
 
 
@@ -103,14 +111,15 @@ export default class Notification extends Component {
                     <Text style={{ fontSize: 14, fontWeight: '500', letterSpacing: 1 }}>Reviews</Text>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row', width: '100%', height: 60, borderColor: 'transparent', borderWidth: 0.5 }}>
                         <View>
-                            <Text style={{ fontSize: 12, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a  map you've created has received a {"\n"}review from another user.</Text>
+                            <Text style={{ fontSize: 11, color: '#999', padding: 5, letterSpacing: 0.7 }}>When a  map you've created has received a {"\n"}review from another user.</Text>
                         </View>
 
 
-                        <Switch style={styles.switchButton}
+                        <Switch  trackColor={{true: '#1BCA9B', false: '#7B8788'}}
+                       
                             value={this.state.switchValue}
                             onValueChange={(switchValue) => this.setState({ switchValue })}>
-                            <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text>
+                            {/* <Text>{this.state.switchValue ? 'Yes' : 'No'}</Text> */}
                         </Switch>
 
 
@@ -136,9 +145,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     switchButton:
-    { 
+    {  
         marginTop: 10,
-         padding: 5 
+         padding: 5 ,
+         
         }
     
    

@@ -1,0 +1,30 @@
+{
+    "users": 
+        [
+            {
+            "id":1,
+            "text":"Rajneesh",
+            "image":"require('./images/PreferencesDiet/DairyGrey.png')"
+         },
+         {
+            "id":2,
+            "text":"Raj",
+            "image":"require('../screens/images/PreferencesDiet/DairyGrey.png')"
+         },
+         {
+            "id":3,
+            "text":"kapil",
+            "image":"require('../screens/images/PreferencesDiet/DairyGrey.png')"
+         },
+         {
+            "id":4,
+            "text":"Rohit",
+            "image":"require('../screens/images/PreferencesDiet/DairyGrey.png')"
+         },
+         {
+            "id":5,
+            "text":"Rahul",
+            "image":"require('../screens/images/PreferencesDiet/DairyGrey.png')"
+         }
+        ]
+}

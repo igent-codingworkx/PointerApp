@@ -7,12 +7,18 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "xcode": "cd ios && open PointerApp.xcodeproj"
   },
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-navigation": "^4.7.1"
+    "react-native-image-picker": "^2.3.0",
+    "react-native-multiple-select": "^0.5.5",
+    "react-native-navigation": "^4.7.1",
+    "react-native-paper": "^3.6.0",
+    "react-native-ratings": "^6.5.0",
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.8.4",

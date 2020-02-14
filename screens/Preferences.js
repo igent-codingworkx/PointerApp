@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, SafeAreaView, Dimensions, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native'
-
+const { width, height } = Dimensions.get('window')
 import Diet from '../Components/Diet'
 import Cuisines from '../Components/Cuisines'
 import Drinks from '../Components/Drinks'
@@ -9,7 +9,7 @@ import Sports from '../Components/Sports'
 import Travel from '../Components/Travel'
 import Interests from '../Components/Interests'
 import DailyLife from '../Components/DailyLife'
-const { width, height } = Dimensions.get('window')
+
 
 export default class Preferences extends Component {
 
@@ -54,8 +54,8 @@ export default class Preferences extends Component {
 
                           <TouchableOpacity onPress={()=> alert("dataSave")}
                                     style={styles.saveButton}>
-                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Save</Text>
-                    </TouchableOpacity>
+                                <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Save</Text>
+                             </TouchableOpacity>
                 </ScrollView>
             </SafeAreaView>
         )
@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
     },
     saveButton:
     {
-        width: width - 80,
-        height: height - 840,
+        width:'80%',
+        height:50,
         backgroundColor: '#019031',
         justifyContent: 'center',
         alignItems: 'center',
